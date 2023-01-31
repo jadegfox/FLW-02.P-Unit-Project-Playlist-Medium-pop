@@ -22,10 +22,11 @@ let displayLink = document.querySelector(".display-link");
 
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
-
-
-
-
+let imageArts = ["https://m.media-amazon.com/images/M/MV5BN2ZkYzkzYmUtNzFjOC00YTRmLWIwYjEtMWZiYjI4Mzg4ZTJjXkEyXkFqcGdeQXVyNjk5NzY4OTk@._V1_.jpg","https://www.allkpop.com/upload/2022/06/content/161243/1655397793-en-dayet-50-2.jpg","https://i.scdn.co/image/ab67616d0000b273253a9c74941281b0407ce940","https://i.scdn.co/image/ab67616d0000b273c31e3f3a15f96cfc4c8f7b7a"];
+let artists = ["BTS","enhypen","TXT","seventeen"]; 
+let songTitle = ["spring day","polaroid love","anti-romantic","world"]; 
+let songMusic = ["https://www.youtube.com/watch?v=OUutARJgw-g","https://www.youtube.com/watch?v=sdsPWMCKIkA","https://www.youtube.com/watch?v=d1w5eJozVjo"
+,"https://www.youtube.com/watch?v=VCDWg0ljbFQ"];
 
 //REFACTOR ARRAYS DAY 
 // task 11: comment out the arrays data.
