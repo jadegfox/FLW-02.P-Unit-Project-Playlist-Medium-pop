@@ -36,12 +36,27 @@ let songMusic = ["https://www.youtube.com/watch?v=OUutARJgw-g","https://www.yout
 let song1 ={ 
   artists:"BTS",
    songTitle: "spring day",
-    Link:"https://www.youtube.com/watch?v=OUutARJgw-g" 
+    Link:"https://www.youtube.com/watch?v=OUutARJgw-g",  
+   artistsImage:"https://m.media-amazon.com/images/M/MV5BN2ZkYzkzYmUtNzFjOC00YTRmLWIwYjEtMWZiYjI4Mzg4ZTJjXkEyXkFqcGdeQXVyNjk5NzY4OTk@._V1_.jpg","https://mir-s3-cdn-cf.behance.net/projects/404/ed188b144786865.Y3JvcCwxMDgwLDg0NCwwLDI1MQ.jpg"
 } 
 let song2 ={
-  
+   artists:"",
+   songTitle: "",
+    Link:"",  
+   artistsImage:
 }
-
+let song3 ={
+   artists:"",
+   songTitle: "",
+    Link:"",  
+   artistsImage:
+} 
+ let song2 ={
+   artists:"B",
+   songTitle: "",
+    Link:"",  
+   artistsImage:
+}
 //REFACTOR LOOPS DAY 
 // task 15: update your `addSongInfo` function so the input values are saved in as values in a new object.
 // task 16: update your `.push()` so the input object is added to your array of objects.
