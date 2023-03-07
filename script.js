@@ -22,12 +22,6 @@ let displayLink = document.querySelector(".display-link");
 
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
-/*let imageArts = ["https://m.media-amazon.com/images/M/MV5BN2ZkYzkzYmUtNzFjOC00YTRmLWIwYjEtMWZiYjI4Mzg4ZTJjXkEyXkFqcGdeQXVyNjk5NzY4OTk@._V1_.jpg","https://mir-s3-cdn-cf.behance.net/projects/404/ed188b144786865.Y3JvcCwxMDgwLDg0NCwwLDI1MQ.jpg","https://ih1.redbubble.net/image.2537238537.6267/aps,504x498,medium,transparent-pad,600x600,f8f8f8.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH-0u2_BtHLmeFodM4OzN442knYIP50L8-YA&usqp=CAU"];
-let artists = ["BTS","enhypen","TXT","seventeen"]; 
-let songTitle = ["spring day","polaroid love","anti-romantic","world"]; 
-let songMusic = ["https://www.youtube.com/watch?v=OUutARJgw-g","https://www.youtube.com/watch?v=sdsPWMCKIkA","https://www.youtube.com/watch?v=d1w5eJozVjo"
-,"https://www.youtube.com/watch?v=VCDWg0ljbFQ"];
-*/
 //REFACTOR ARRAYS DAY 
 // task 11: comment out the arrays data.
 // task 12: create an object for each of your songs.
@@ -37,25 +31,24 @@ let song1 ={
   artists:"BTS",
    songTitle: "spring day",
     Link:"https://www.youtube.com/watch?v=OUutARJgw-g",  
-   artistsImage:"https://m.media-amazon.com/images/M/MV5BN2ZkYzkzYmUtNzFjOC00YTRmLWIwYjEtMWZiYjI4Mzg4ZTJjXkEyXkFqcGdeQXVyNjk5NzY4OTk@._V1_.jpg","https://mir-s3-cdn-cf.behance.net/projects/404/ed188b144786865.Y3JvcCwxMDgwLDg0NCwwLDI1MQ.jpg"
+   artistsImage:"https://m.media-amazon.com/images/M/MV5BN2ZkYzkzYmUtNzFjOC00YTRmLWIwYjEtMWZiYjI4Mzg4ZTJjXkEyXkFqcGdeQXVyNjk5NzY4OTk@._V1_.jpg"
 } 
 let song2 ={
-   artists:"",
-   songTitle: "",
-    Link:"",  
-   artistsImage:
+   artists:"enhypen",
+   songTitle:"polaroid love",
+    Link:"https://www.youtube.com/watch?v=sdsPWMCKIkA",   artistsImage:"https://ih1.redbubble.net/image.2537238537.6267/aps,504x498,medium,transparent-pad,600x600,f8f8f8.jpg"
 }
 let song3 ={
-   artists:"",
-   songTitle: "",
-    Link:"",  
-   artistsImage:
+   artists:"TXT",
+   songTitle: "anti-romantic",
+    Link:"https://www.youtube.com/watch?v=d1w5eJozVjo",  
+   artistsImage:"medium,transparent-pad,600x600,f8f8f8.jpg"
 } 
- let song2 ={
-   artists:"B",
-   songTitle: "",
-    Link:"",  
-   artistsImage:
+ let song4 ={
+   artists:"seventeen",
+   songTitle: "world",
+    Link:"https://www.youtube.com/watch?v=VCDWg0ljbFQ",  
+   artistsImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH-0u2_BtHLmeFodM4OzN442knYIP50L8-YA&usqp=CAU"
 }
 //REFACTOR LOOPS DAY 
 // task 15: update your `addSongInfo` function so the input values are saved in as values in a new object.
@@ -90,25 +83,40 @@ function emptyDisplay() {
   displayImage.innerHTML = "";
   displaySong.innerHTML = "";
   displayArtist.innerHTML = "";
-  displayLink.innerHTML = "";
+  displayLink.innerHTML = "";  
 }
 
-
-
-
-function displaySongInfo() {
-imageArts.forEach(function(image){
-displayImage.insertAdjacentHTML("beforeend",`<img src=${image}/>`)
+let songList=[ { 
+  artists:"BTS",
+   songTitle: "spring day",
+    Link:"https://www.youtube.com/watch?v=OUutARJgw-g",  
+   artistsImage:"https://m.media-amazon.com/images/M/MV5BN2ZkYzkzYmUtNzFjOC00YTRmLWIwYjEtMWZiYjI4Mzg4ZTJjXkEyXkFqcGdeQXVyNjk5NzY4OTk@._V1_.jpg"
+},
+{
+   artists:"enhypen",
+   songTitle:"polaroid love",
+    Link:"https://www.youtube.com/watch?v=sdsPWMCKIkA",    artistsImage:"https://i.pinimg.com/736x/13/43/2f/13432ff43e58b601ba5a4358f93d997d.jpg"
+},
+{
+   artists:"TXT",
+   songTitle: "anti-romantic",
+    Link:"https://www.youtube.com/watch?v=d1w5eJozVjo",  
+   artistsImage:"medium,transparent-pad,600x600,f8f8f8.jpg"
+}, 
+ {
+   artists:"seventeen",
+   songTitle: "world",
+    Link:"https://www.youtube.com/watch?v=VCDWg0ljbFQ",  
+   artistsImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH-0u2_BtHLmeFodM4OzN442knYIP50L8-YA&usqp=CAU"
+}
+];
+ console.log(hello);
+function displaySongInfo(){
+songList.forEach(function(song){
+displayImage.insertAdjacentHTML("beforeend",`<img src=${song.artistsImage}/>`)
+displayArtist.insertAdjacentHTML("beforeend",`<p>${song.artists}</p>`)
+displaySong.insertAdjacentHTML("beforeend",`<p>${song.songTitle}</p>`)displayLink.insertAdjacentHTML("beforeend",`<p><a href=${song.Link}>link</a></p>`) })    
 })  
-artists.forEach(function(artist){
-displayArtist.insertAdjacentHTML("beforeend",`<p>${artist}</p>`)
-})  
-songTitle.forEach(function(Title){
-displaySong.insertAdjacentHTML("beforeend",`<p>${Title}</p>`) 
-})  
- songMusic.forEach(function(Music){
-displayLink.insertAdjacentHTML("beforeend",`<p><a href=${Music}>link</a></p>`) 
-})   
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
 
