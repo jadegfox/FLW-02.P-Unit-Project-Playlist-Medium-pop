@@ -110,12 +110,13 @@ let songList=[ {
    artistsImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH-0u2_BtHLmeFodM4OzN442knYIP50L8-YA&usqp=CAU"
 }
 ];
- console.log(hello);
+
 function displaySongInfo(){
 songList.forEach(function(song){
 displayImage.insertAdjacentHTML("beforeend",`<img src=${song.artistsImage}/>`)
 displayArtist.insertAdjacentHTML("beforeend",`<p>${song.artists}</p>`)
-displaySong.insertAdjacentHTML("beforeend",`<p>${song.songTitle}</p>`)displayLink.insertAdjacentHTML("beforeend",`<p><a href=${song.Link}>link</a></p>`) })    
+displaySong.insertAdjacentHTML("beforeend",`<p>${song.songTitle}</p>`) 
+displayLink.insertAdjacentHTML("beforeend",`<p><a href=${song.Link}>link</a></p>`)   
 })  
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
